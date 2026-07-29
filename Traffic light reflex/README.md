@@ -44,12 +44,5 @@ npx serve .
 - Reaction time is `performance.now()` at input minus the timestamp recorded the instant the light switched to green — accurate to sub-millisecond precision, unlike `Date.now()`.
 - The launch animation duration is fixed; only the *timing of the reaction* varies, so the grading reflects reflexes, not animation speed.
 
-## Deploying with GitHub Pages
-
-1. Push these three files to a GitHub repo (or upload via **Add file → Upload files**)
-2. Go to **Settings → Pages**, set the source to your main branch (root)
-3. Your live URL will be `https://<username>.github.io/<repo-name>/`
-
----
 
 Built by Maulya Shetty.
