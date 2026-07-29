@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Traffic Light Reflex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="topbar">
+    <div class="brand">🚦 <span>Traffic Light Reflex</span></div>
+    <div class="hud" id="hud">
+      <div class="hud-chip">round <b id="roundNum">1</b>/<span id="roundTotal">5</span></div>
+      <div class="hud-chip">best <b id="bestNum">—</b></div>
+      <div class="hud-chip">avg <b id="avgNum">—</b></div>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="screen" id="introScreen">
+    <div class="card">
+      <div class="intro-icon">🚦</div>
+      <h1>How fast off the line are you?</h1>
+      <p>Wait at the red light. The instant it turns green, react. Jump the gun and you'll stall. 5 rounds — we'll grade your reflexes at the end.</p>
+      <button class="btn primary big" id="startBtn">Start</button>
+    </div>
+  </section>
+
+  <!-- GAME -->
+  <section class="screen hidden" id="gameScreen">
+    <div class="scene-holder">
+      <canvas id="scene" width="700" height="300"></canvas>
+    </div>
+    <div class="status-line" id="statusLine">Wait for green…</div>
+    <button class="go-btn" id="goBtn">TAP / SPACE TO GO</button>
+  </section>
+
+  <!-- END -->
+  <section class="screen hidden" id="endScreen">
+    <div class="card">
+      <div class="intro-icon" id="endIcon">🏁</div>
+      <h1 id="endTitle">Nice reflexes!</h1>
+      <p id="endSummary">Average reaction: 0ms</p>
+      <div class="end-stats">
+        <div class="stat"><b id="endAvg">0ms</b>average</div>
+        <div class="stat"><b id="endBest">0ms</b>best</div>
+        <div class="stat"><b id="endFaults">0</b>false starts</div>
+      </div>
+      <button class="btn primary big" id="replayBtn">Try again</button>
+    </div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
